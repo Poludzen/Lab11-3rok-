@@ -15,7 +15,7 @@ This neural network consists of 2 convolutional layers(one with regulaizer), Den
 some regularization layer(Dropout) and MaxPool layer
 After fiting with this network , that is shown that neural network really works ( accuracy of a network on a test dataset and one prediction on example)
 
-## First example: CIFAR 10 Classification task
+## First example: CIFAR 10 Classification task on TensorFlow(Keras API)
 Source of example: https://colab.research.google.com/drive/1LXQpqk0WpracGLCpprtONjvI8p6ftCW2?usp=sharing
 ### Overview: 
 CIFAR10 task is shown in this example: cifar10 dataset consists of 60000 32x32 colour images in 10 classes. 
@@ -45,3 +45,40 @@ Also, classification report was calculated on test dataset
 Accuracy on test is 0.7262
 ##### Classification report and Accuracy 
 ![alt text](https://github.com/Poludzen/Lab11-3rok-/blob/main/images/score.jpg?raw=true "Score")
+
+## Second example: EMNIST62 Classification task on PyTorch
+Source : https://colab.research.google.com/drive/1r-c6UTkJEQx3Pi-Hl9q_MoveIF_0h03M?usp=sharing#scrollTo=Fgo7WgPS7ihR
+
+### Overview:
+EMNIST62 task is shown in this example: emnist62 dataset consists of 700000 grayscale images in 62 classes.
+The 62 different classes represent characters : 0-9, a-z, A-Z
+In this code we have a convolutional neural network, that build with pyTorch framework.
+This neural network consists of 2 convolutional layers(one with regulaizer), Dense layers, 
+some regularization layer(Dropout) and MaxPool layer
+After fiting with this network , that is shown that neural network really works ( accuracy of a network on a test dataset and one prediction on example)
+
+### Why it is important?
+EMNIST62 dataset it is the basis for many natural text recognition systems, it contains the main handwritten characters, and capital ones. It is quite hard due to the similarity of some classes. It continues to be used to train character classifiers neural networks in the tasks of translating text from handwritten/printed to computer.
+It should be noted that this is one of the main tasks of computer vision at the moment.
+
+### Dataset Example:
+##### 8, e, X symbols are presented
+![alt text](https://github.com/Poludzen/Lab11-3rok-/blob/main/images/emnist62-ex1.jpg?raw=True "8")
+![alt text](https://github.com/Poludzen/Lab11-3rok-/blob/main/images/emnist62-ex2.jpg?raw=True "e")
+![alt text](https://github.com/Poludzen/Lab11-3rok-/blob/main/images/emnist62-ex3.jpg?raw=True "X")
+### Fit, predict, report
+Neural network was fit on 20 epochs, after that some predictions were done:
+##### Prediction (7 was given and 7 was predicted)
+![alt text](https://github.com/Poludzen/Lab11-3rok-/blob/main/images/emnist62-preds1.jpg?raw=True "Prediciton 7)
+
+It should me mention, that 7 sometimes look similar to 1, I, J; Cause of such examples this dataset is so hard
+
+Also, classification report was calculated on test dataset
+Accuracy on test dataset is 0.846
+And macro F1 average is 0.73
+##### Classification report total
+![alt text](https://github.com/Poludzen/Lab11-3rok-/blob/main/images/emnist62-score.jpg?raw=True "Report")
+
+## Conclusion
+PyTorch and TensorFlow are used in various areas, one of the most famous is computer vision. Sometimes datasets that look simple can be of great importance for the whole direction, examples of such datasets are presented in this paper.
+
